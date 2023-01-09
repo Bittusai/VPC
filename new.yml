@@ -8,10 +8,5 @@ Resources:
             Tags:
             - Key: stack
               Value: production
-        - name: Configure AWS Credentials
-          uses: aws-actions/configure-aws-credentials@v1
-          with:
-           aws-access-key-id: ${{ AKIAYH7QRUSNN5FOZBNV }}
-           aws-secret-access-key: ${{ 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 }}
-           aws-region: ap-south-1
+        
            
