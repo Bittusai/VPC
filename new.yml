@@ -5,11 +5,13 @@ Resources:
             CidrBlock: 192.168.0.0/22
             EnableDnsSupport: 'true'
             EnableDnsHostnames: 'true'
-    - name: Configure AWS Credentials
-      uses: aws-actions/configure-aws-credentials@v1
-      with:
-        aws-access-key-id: ${{ AKIAYH7QRUSNN5FOZBNV }}
-        aws-secret-access-key: ${{ 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 }}
-        aws-region: ap-south-1
-        role-to-assume: ${{ secrets.Git-hub-actions }}
-        role-external-id: ${{ secrets.arn:aws:iam::566903284890:role/Git-hub-actions }}
+            Tags:
+            - Key: stack
+              Value: production
+        - name: Configure AWS Credentials
+          uses: aws-actions/configure-aws-credentials@v1
+          with:
+           aws-access-key-id: ${{ AKIAYH7QRUSNN5FOZBNV }}
+           aws-secret-access-key: ${{ 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 }}
+           aws-region: ap-south-1
+           
